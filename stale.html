@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<ul>
+{% for branch in site.data.stale_branches %}
+<li>
+  <a href="{{ branch.repo.remoteUrl}}/branches?_a=all">{{ branch.repo.name }}</a> - {{ branch.branch_name }}
+</li>
+{% endfor %}
+</ul>
